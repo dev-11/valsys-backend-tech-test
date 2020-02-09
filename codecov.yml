@@ -32,3 +32,6 @@ ignore:
   - "**/config.py"
   - "config.py"
   - "**/__init__.py"
+  - "Entities/**.py"
+  - "app.py"
+
