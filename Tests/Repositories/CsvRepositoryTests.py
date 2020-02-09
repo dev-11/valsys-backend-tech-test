@@ -3,7 +3,7 @@ from Repositories import CsvRepository
 
 
 class CsvRepositoryTests(unittest.TestCase):
-    def test01(self):
+    def test_01(self):
         csv_file = 'Tests/TestEnvironment/empty.csv'
         repo = CsvRepository()
         a = repo.get_headers(csv_file)

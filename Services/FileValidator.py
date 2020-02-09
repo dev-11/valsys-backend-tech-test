@@ -10,19 +10,18 @@ class FileValidator:
     def is_file_structure_valid(self, data):
         return len(data[0]) == self._header_length
 
-    def get_file_type(self, data):
+    def get_statement_type(self, data):
         desc = data[1].lower()
+        key = None
 
         if self._is_balanced_sheet(desc):
-            return config.SUPPORTED_TYPES[self._balance_sheet]
+            key = self._balance_sheet
+        elif self._is_description_in_list(self._cache_flow_statement, desc):
+            key = self._cache_flow_statement
+        elif self._is_description_in_list(self._income_statement, desc):
+            key = self._income_statement
 
-        if self._is_description_in_list(self._cache_flow_statement, desc):
-            return self._cache_flow_statement
-
-        if self._is_description_in_list(self._income_statement, desc):
-            return self._income_statement
-
-        return 'unknown type'
+        return 'unknown type' if key is None else config.SUPPORTED_STATEMENT_TYPES[key]
 
     def _is_balanced_sheet(self, desc):
         return config.SUPPORTED_METADATA[self._balance_sheet] in desc

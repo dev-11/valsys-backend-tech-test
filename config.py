@@ -12,7 +12,7 @@ SUPPORTED_METADATA = {
     'income_statement': ['Income', 'revenues', 'revenue']
 }
 
-SUPPORTED_TYPES = {
+SUPPORTED_STATEMENT_TYPES = {
     'balance_sheet': 'balance sheet',
     'cache_flow_statement': 'cache flow statement',
     'income_statement': 'income statement'
