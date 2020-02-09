@@ -7,8 +7,8 @@ class FileValidator:
     _cache_flow_statement = 'cache_flow_statement'
     _income_statement = 'income_statement'
 
-    def is_file_structure_valid(self, data):
-        return len(data[0]) == self._header_length
+    def is_file_structure_valid(self, header):
+        return False if not header else len(header) == self._header_length
 
     def get_statement_type(self, data):
         desc = data[1].lower()
