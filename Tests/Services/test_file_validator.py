@@ -35,26 +35,26 @@ class FileValidatorTests(unittest.TestCase):
         self.assertEqual('balance_sheet', result[0])
         self.assertEqual('balance sheet', result[1])
 
-    def test_get_statement_type_returns_cache_flow_statement_on_operating_keyword_in_desc(self):
+    def test_get_statement_type_returns_cash_flow_statement_on_operating_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'Operating', ''])
         self.assertEqual(2, len(result))
-        self.assertEqual('cache_flow_statement', result[0])
-        self.assertEqual('cache flow statement', result[1])
+        self.assertEqual('cash_flow_statement', result[0])
+        self.assertEqual('cash flow statement', result[1])
 
-    def test_get_statement_type_returns_cache_flow_statement_on_activities_keyword_in_desc(self):
+    def test_get_statement_type_returns_cash_flow_statement_on_activities_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'activities', ''])
         self.assertEqual(2, len(result))
-        self.assertEqual('cache_flow_statement', result[0])
-        self.assertEqual('cache flow statement', result[1])
+        self.assertEqual('cash_flow_statement', result[0])
+        self.assertEqual('cash flow statement', result[1])
 
-    def test_get_statement_type_returns_cache_flow_statement_on_operations_keyword_in_desc(self):
+    def test_get_statement_type_returns_cash_flow_statement_on_operations_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'Operations', ''])
         self.assertEqual(2, len(result))
-        self.assertEqual('cache_flow_statement', result[0])
-        self.assertEqual('cache flow statement', result[1])
+        self.assertEqual('cash_flow_statement', result[0])
+        self.assertEqual('cash flow statement', result[1])
 
     def test_get_statement_type_returns_income_statement_on_income_keyword_in_desc(self):
         fv = FileValidator()

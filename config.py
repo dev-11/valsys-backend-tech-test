@@ -8,12 +8,12 @@ CSV_FILE_EXTENSION = 'csv'
 
 SUPPORTED_METADATA_KEYWORDS = {
     'balance_sheet': 'Current assets',
-    'cache_flow_statement': ['Operating', 'activities', 'Operations'],
+    'cash_flow_statement': ['Operating', 'activities', 'Operations'],
     'income_statement': ['Income', 'revenues', 'revenue']
 }
 
 SUPPORTED_STATEMENT_TYPES = {
     'balance_sheet': 'balance sheet',
-    'cache_flow_statement': 'cache flow statement',
+    'cash_flow_statement': 'cash flow statement',
     'income_statement': 'income statement'
 }

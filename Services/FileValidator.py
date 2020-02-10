@@ -4,7 +4,7 @@ import config
 class FileValidator:
     _header_length = 3
     _balance_sheet = 'balance_sheet'
-    _cache_flow_statement = 'cache_flow_statement'
+    _cache_flow_statement = 'cash_flow_statement'
     _income_statement = 'income_statement'
 
     def is_file_structure_valid(self, header):
