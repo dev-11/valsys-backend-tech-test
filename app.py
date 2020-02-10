@@ -22,7 +22,8 @@ def main():
         headers = repo.get_headers(file)
         statement_type = file_validator.get_statement_type(metadata)
         is_file_structure_valid = file_validator.is_file_structure_valid(headers)
-        is_file_in_good_dir = file_validator.is_file_in_good_dir(statement_type, file)
+        config.SUPPORTED_METADATA_KEYWORDS.keys()
+        is_file_in_good_dir = file_validator.is_file_in_good_dir(statement_type[0], file)
         new_files.append(Entities.ScannedFileResult(file, statement_type, company, is_file_in_good_dir,
                                                     is_file_structure_valid))
 
@@ -31,7 +32,7 @@ def main():
         print(f'\n'
               f'company: {new_file.company}\n'              
               f'file path: {new_file.path}\n'
-              f'statement type: {new_file.statement_type}\n'
+              f'statement type: {new_file.statement_type[1]}\n'
               f'is file in good dir: {new_file.is_file_in_good_dir}\n'
               f'is file valid: {new_file.is_valid}')
 

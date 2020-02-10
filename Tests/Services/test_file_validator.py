@@ -31,42 +31,58 @@ class FileValidatorTests(unittest.TestCase):
     def test_get_statement_type_returns_balance_sheet_on_current_assets_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'current assets', ''])
-        self.assertEqual('balance sheet', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('balance_sheet', result[0])
+        self.assertEqual('balance sheet', result[1])
 
     def test_get_statement_type_returns_cache_flow_statement_on_operating_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'Operating', ''])
-        self.assertEqual('cache flow statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('cache_flow_statement', result[0])
+        self.assertEqual('cache flow statement', result[1])
 
     def test_get_statement_type_returns_cache_flow_statement_on_activities_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'activities', ''])
-        self.assertEqual('cache flow statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('cache_flow_statement', result[0])
+        self.assertEqual('cache flow statement', result[1])
 
     def test_get_statement_type_returns_cache_flow_statement_on_operations_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'Operations', ''])
-        self.assertEqual('cache flow statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('cache_flow_statement', result[0])
+        self.assertEqual('cache flow statement', result[1])
 
     def test_get_statement_type_returns_income_statement_on_income_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'Income', ''])
-        self.assertEqual('income statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('income_statement', result[0])
+        self.assertEqual('income statement', result[1])
 
     def test_get_statement_type_returns_income_statement_on_revenues_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'revenues', ''])
-        self.assertEqual('income statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('income_statement', result[0])
+        self.assertEqual('income statement', result[1])
 
     def test_get_statement_type_returns_income_statement_on_revenue_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', 'revenue', ''])
-        self.assertEqual('income statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('income_statement', result[0])
+        self.assertEqual('income statement', result[1])
 
     def test_get_statement_type_returns_unknown_statement_on_empty_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', '', ''])
-        self.assertEqual('unknown statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('unknown_statement', result[0])
+        self.assertEqual('unknown statement', result[1])
 
     def test_get_statement_type_raises_attribute_error_on_None_keyword_in_desc(self):
         fv = FileValidator()
@@ -75,7 +91,9 @@ class FileValidatorTests(unittest.TestCase):
     def test_get_statement_type_returns_unknown_statement_on_alien_keyword_in_desc(self):
         fv = FileValidator()
         result = fv.get_statement_type(['', '!@#$%^&*(ASDFGHJK', ''])
-        self.assertEqual('unknown statement', result)
+        self.assertEqual(2, len(result))
+        self.assertEqual('unknown_statement', result[0])
+        self.assertEqual('unknown statement', result[1])
 
     def test_is_file_in_good_dir_returns_true_for_balance_sheet(self):
         fv = FileValidator()

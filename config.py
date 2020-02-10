@@ -6,7 +6,7 @@ DIRECTORIES_TO_SCAN = [
 
 CSV_FILE_EXTENSION = 'csv'
 
-SUPPORTED_METADATA = {
+SUPPORTED_METADATA_KEYWORDS = {
     'balance_sheet': 'Current assets',
     'cache_flow_statement': ['Operating', 'activities', 'Operations'],
     'income_statement': ['Income', 'revenues', 'revenue']
