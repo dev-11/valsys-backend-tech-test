@@ -14,7 +14,7 @@ class FileValidator:
         desc = data[1].lower()
         key = None
 
-        if self._is_balanced_sheet(desc):
+        if self._is_balance_sheet(desc):
             key = self._balance_sheet
         elif self._is_description_in_list(self._cache_flow_statement, desc):
             key = self._cache_flow_statement
@@ -25,7 +25,7 @@ class FileValidator:
             if key is None\
             else [key, config.SUPPORTED_STATEMENT_TYPES[key]]
 
-    def _is_balanced_sheet(self, desc):
+    def _is_balance_sheet(self, desc):
         return config.SUPPORTED_METADATA_KEYWORDS[self._balance_sheet].lower() in desc
 
     @staticmethod

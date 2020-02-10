@@ -6,11 +6,6 @@ import Entities
 
 
 def main():
-    # scan folders DONE
-    # identify new files in folder DONE
-    # verify file is in correct folder
-    # print result
-
     scanner = Services.DirectoryScanner(config.DIRECTORIES_TO_SCAN, Services.CompanyRegistry())
     repo = Repositories.CsvRepository()
     file_validator = Services.FileValidator()
@@ -22,7 +17,6 @@ def main():
         headers = repo.get_headers(file)
         statement_type = file_validator.get_statement_type(metadata)
         is_file_structure_valid = file_validator.is_file_structure_valid(headers)
-        config.SUPPORTED_METADATA_KEYWORDS.keys()
         is_file_in_good_dir = file_validator.is_file_in_good_dir(statement_type[0], file)
         new_files.append(Entities.ScannedFileResult(file, statement_type, company, is_file_in_good_dir,
                                                     is_file_structure_valid))
