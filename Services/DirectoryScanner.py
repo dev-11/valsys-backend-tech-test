@@ -11,7 +11,7 @@ class DirectoryScanner:
         news = []
         for current_dir in self._directories:
             for file in os.listdir(current_dir):
-                if file[0] != '.':  # skipping hidden files
+                if file[0] != '.' and '.' in file:  # skipping hidden files and focusing on files with ext
                     filename, extension = file.split('.')
                     if extension == config.CSV_FILE_EXTENSION and self._company_registry.is_company_unseen(filename):
                         news.append([current_dir + file, filename])
