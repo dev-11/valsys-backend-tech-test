@@ -1,3 +1,7 @@
+[![codecov](https://codecov.io/gh/dev-11/valsys-backend-tech-test/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-11/valsys-backend-tech-test)
+
+---
+
 ## Technical test
 
 
