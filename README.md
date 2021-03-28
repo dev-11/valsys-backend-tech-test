@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dev-11/valsys-backend-tech-test.svg?branch=master)](https://travis-ci.org/dev-11/valsys-backend-tech-test)
+[![Build Status](https://travis-ci.com/dev-11/valsys-backend-tech-test.svg?branch=master)](https://travis-ci.com/dev-11/valsys-backend-tech-test)
 [![codecov](https://codecov.io/gh/dev-11/valsys-backend-tech-test/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-11/valsys-backend-tech-test)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c5c148925e04728a06df0a44d2ab43f)](https://www.codacy.com/manual/dev-11/valsys-backend-tech-test?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dev-11/valsys-backend-tech-test&amp;utm_campaign=Badge_Grade)
 
